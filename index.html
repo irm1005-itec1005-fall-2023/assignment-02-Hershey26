@@ -1,33 +1,193 @@
 <!DOCTYPE html>
 <html lang="en-ca">
+  <head>
+    <!-- Set the page title -->
+    <title>New Bottle Products Website</title>
 
-<head>
-  <!-- Set the page title -->
-  <title>Assignment 02</title>
+    <!-- Set the charset we're using to UTF-8 -->
+    <meta charset="UTF-8" />
 
-  <!-- Set the charset we're using to UTF-8 -->
-  <meta charset="utf-8" />
+    <!-- Set the screens default zoom / scale to 1 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Set the screens default zoom / scale to 1 -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Specifies the document mode for Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <!-- Specifies the document mode for Internet Explorer -->
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assignment1.css" />
+    <!-- The following CSS has been added so that the page
+    doesn't look super awful -->
+    <!-- Ignore everything in the <style> tag for now -->
+    <!-- We will learn about CSS later in the course -->
+    <style>
+      /*
+        These styles set the font, font-size, and add a
+        little bit of space between lines
+      */
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.6;
+      }
+      /*
+        These styles make sure that any super wide images
+        don't overflow the page width
+      */
+      img {
 
-  <!-- We are using a CSS Reset file to standardize browser default css -->
-  <link rel="stylesheet" href="./reset.css" />
+        max-width: 100%;
 
-  <!-- This is where all of our awesome CSS code goes -->
-  <link rel="stylesheet" href="./style.css" />
-</head>
+      }
+    </style>
+  </head>
+ 
+  <body>
+    <header>
+      <img src="./Images/logo.png" alt="Picture that says New Bottle" width="100"/>
+      <div class="name-wrapper">
+        <h2>New Bottle</h2>
+      </div>
+      <nav>
+        <h3>Site Navigation</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#mission"> Our Mission </a> </li>
+          <li><a href="#buy"> Buy Now</a></li>
+        </ul>
+      </nav>
+      
+   </header>
 
-<body>
-  <!--
+  <main>
+     <h1>"Hydrate Your Life: Sip, Refresh, Repeat!"</h1>
+     <img src="./Images/Brand-logo.png" alt="Picture that says New Bottle" width="1200"/>
+     <section>
+        <h2>Our Products</h2>
+        <p>Our water bottles are meticulously crafted to elevate your hydration experience. Designed for both style and functionality, our bottles are the perfect companions for your active lifestyle. Whether you're an eco-conscious individual seeking sustainable alternatives or a fitness enthusiast in need of reliable hydration, our diverse range of water bottles has something for everyone. From sleek stainless steel options that keep your drinks cold for hours to elegant glass bottles that enhance the purity of your beverages, our products marry form and function seamlessly.</p>
+     </section>
+     
+     <section>
+      <h2>Product Display</h2>
+      <h3> Stainless Steel</h3>
+      <img src="./Images/STWaterbottle.jpg" alt="Picture of stainless steel water bottle" width="500"/>
+      <h3> Glass</h3>
+      <img src="./Images/GWaterbottle.webp" alt="Picture of glass water bottle" width="500"/>
+      <h3> Plastic</h3>
+      <img src="./Images/PWaterbottle.jpg" alt="Picture of plastic water bottle" width="500"/>
+     </section>
+      <section>
+        <h2>Product Prices</h2>
+        <table>
+          <thead>
+              <tr>
+                <th>Product</th>
+                <th>Price</th>
+              </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Stainless Steel</td>
+              <td>$50</td>
+            </tr>
+            <tr>
+              <td>Glass</td>
+              <td>$70</td>
+            </tr>
+            <tr>
+              <td>Plastic</td>
+              <td>$30</td>
+            </tr>
+          </tbody>
+          <!--Inflation LOL-->
+        </table>
+      </section>
+      <section>
+        <h2 id="mission">Our Mission</h2>
+        <p>Our mission is to provide our customers with the highest quality water bottles that are both stylish and functional. We believe that hydration is a key component of a healthy lifestyle, and we want to make it as easy as possible for our customers to stay hydrated throughout the day. We are committed to providing our customers with the best products and service possible, and we strive to exceed their expectations every time.</p>
+      </section>
+      <section>
+        <h2 id="buy">Buy Now</h2>
+        <Form>
+          <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required/>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required/>
+            <label for="sex">Sex</label>
+            <select id="sex" name="sex">
+              <option value="">--Please choose an option--</option>
+              <option value="">Male </option>
+              <option value="">Female</option>
+            </select>
+          </fieldset>
 
-    YOU HAVE TO MODIFY THE HTML TO BUILD YOUR AWESOME PAGE
+          <fieldset>
+            <legend>Payment Information</legend>
+            <label for="product">Product type:</label>
+            <select id="product" name="product" required>
+              <option value="">--Please choose an option--</option>
+              <option value="ST">Stainless Steel</option>
+              <option value="G">Glass</option>
+              <option value="P">Plastic</option>
+            </select>
+            <label >Payment Method</label>
+            <input type="radio" id="deb" name="payment" value="Debit" required>
+            <label for="deb">Debit</label>
+            <input type="radio" id="cred" name="payment" value="Credit" required/>
+            <label for="cred">Credit</label>
+            <input type="radio" id="pal" name="payment" value="Paypal" required/>
+            <label for="pal">Paypal</label>
+            <label for="cn">Card #</label>
+            <input type="text" id="cn" name="cn" required/>
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" required/>
+            
+          </fieldset>
+          <fieldset>
+            <legend>Shipping Information</legend>
+            <Label for="country">country</Label>
+            <input id="country" type="text" required/>
+            <label for="add">Address</label>
+            <input id="add" type="text" required/> 
+            <label for="spec">Special Instuctions</label>
+            <input id="spec" type="text"/>
+          </fieldset>
+          <input type="submit" value="Submit"/>
+        </Form>
+        
+      </section>
+  </main>
+  <footer>
+    <section>
+      <nav>
+        <h3>Site Navigation</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#mission"> Our Mission </a> </li>
+          <li><a href="#buy"> Buy Now</a></li>
+        </ul>
+      </nav>
+      <img src="./Images/logo.png" alt="Picture that says New Bottle" width="100"/>
+    </section>
+    <p>New Bottle 2023 © </p>
+  </footer>
+    <div>
+      <!--
 
-  -->
-  <h1>Assignment 02</h1>
-</body>
+        LIST ANY CITATIONS HERE
 
+        * Github Copilot generated some options for me
+        * I used chat gpt for the information on the waterbottles
+        * Github copilot generated the text in our mission for me 
+        * https://namelix.com/app/?keywords=water+bottle used to generate company name
+        *used bing to do the css float
+        *used bing to put border around table
+        *used bing to get rid of the dots in the list using CSS
+
+      -->
+
+      <!-- YOU HAVE TO MODIFY THE HTML TO BUILD YOUR AWESOME PAGE-->
+    </div>
+  </body>
 </html>
