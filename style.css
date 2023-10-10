@@ -1,16 +1,9 @@
-/*
- * Assignment 02
- * CSS FILE
- */
-
 body {
   font-family: Arial, Helvetica, sans-serif;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
-
 h1 {
   font-size: 2.5rem;
   font-weight: bold;
@@ -25,62 +18,90 @@ h1 {
   text-align: center;
   color: #69cc69;
 }
-nav{
+header > nav{
   display: flex;
+  padding: .5rem;
   justify-content: center;
   align-items: center;
   background-color: #69cc69;
   color: #fff;
-  padding: 0.5rem;
-  border-radius: 2rem;
 }
 nav > ul {
   list-style: none;
   display: flex;
-  background-color: #fff;
-  color: #69cc69;
   padding: 1rem;
-  margin: 1rem;
+  margin: 0;
   border-radius: 1rem;
 }
-
-nav > ul > li > a {
-  display: flex;
-  justify-content: justify;
-  text-decoration: none;
-  color: #69cc69;
-padding: .25rem;
-}
-
 main {
   margin: 3rem 0rem;
   padding: 1rem;
 }
-
-.form {
-  text-align: left;
-}
-.form > h2{
-  text-align: center;
+.hero-image {
+  display: flex;
+  justify-content: center;
 }
 section {
   display: flex;
   text-align: center;
+  justify-content: center;
+  align-items: center;
   background-color: #69cc69;
   margin: 1rem;
   padding: 1rem;
   border-radius: 1rem;
   flex-direction: column;
 }
-section > img {
-  max-width: 100%;
-  max-height: 100%;
-  width: 50rem;
-  height: 50rem;
+table, th, td {
+  border-style: double;
+  border-color: #fff;
+}
+table{
+ width: 100%;
+}
+a {
+  display: flex;
+  justify-content: justify;
+  text-decoration: none;
+  color: #69cc69;
+  margin: .2rem;
+  padding: .1rem;
+  background-color: #fff;
   border-radius: .5rem;
+}
+.form {
+  text-align: left;
+}
+.form > h2{
+  text-align: center;
+}
+.products > img{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: .5rem;
+  padding: .5rem;
+  margin: .5rem;
+  color: #69cc69;
+  max-width: 100%;
+  width: 700px;
 }
 p{
   display: flex;
   background-color: #fff;
   border-radius: .5rem;
+  padding: .5rem;
+}
+.copy-img{
+  display: flex;
+  background-color: #fff;
+  color: black; 
+}
+footer {
+  background-color: #69cc69;
+  color: #fff;
+  padding: 1rem;
+  margin: 0;
 }
